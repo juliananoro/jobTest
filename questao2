@@ -1,0 +1,27 @@
+import java.util.Scanner;
+  
+class Main {
+  public static void main(String[] args) {
+    int seq1, seq2, fib;
+    seq1 = 0;
+    seq2 = 1;
+    fib = 0;
+
+    System.out.println("Digite um número para saber se ele está na sequência de Fibonacci:");
+    
+    Scanner entrada = new Scanner (System.in);
+    int num = entrada.nextInt();
+    
+    while (fib < num){
+      fib = seq1 + seq2;
+      seq1 = seq2;
+      seq2 = fib;
+    }
+    if (num == fib) {
+      System.out.println("O número " + num + " faz parte da sequência de Fibonacci!");
+    }
+    else {
+      System.out.println("O número " + num + " não faz parte da sequência de Fibonacci!");  
+    }
+  }
+}

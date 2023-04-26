@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+    String palavra;
+    String palavraInvertida = "";
+    
+    System.out.println("Insira uma palavra para invertermos:");
+
+    Scanner entrada = new Scanner (System.in);
+    
+    palavra = entrada.next();
+
+    for (int i = palavra.length() - 1; i >= 0; i--) {
+         palavraInvertida += palavra.charAt(i);
+      }
+    
+    System.out.println("A palavra invertida é: " + palavraInvertida);
+  }
+}
